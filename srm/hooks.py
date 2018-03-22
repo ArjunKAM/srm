@@ -12,8 +12,8 @@ app_email = "ragavendragj12@gmail.com"
 app_license = "MIT"
 
 website_context = {
-"favicon": "assets/srm/image/srm(1).png" ,
-"splash_image": "assets/srm/image/srm(1).png"
+    "favicon": "assets/srm/image/srm(1).png",
+    "splash_image": "assets/srm/image/srm(1).png"
 }
 # Includes in <head>
 # ------------------
@@ -82,6 +82,11 @@ website_context = {
 # Document Events
 # ---------------
 # Hook on document methods and events
+doc_events = {
+    "Student": {
+        "on_update": "srm.api.new_joinee_alert"
+    }
+}
 
 # doc_events = {
 # 	"*": {
@@ -123,4 +128,3 @@ website_context = {
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "srm.event.get_events"
 # }
-
